@@ -19,7 +19,7 @@
     <header class="topbar">
         <nav>
             <a href="./index.php">Accueil</a>
-            <a href="./articles.html">Articles</a>
+            <a href="./addArticle.php">Articles</a>
             <a href="./contact.html">Contact</a>
         </nav>
         <div class="log">
@@ -34,19 +34,19 @@
     <div class="container-main">
 <article class="article1">
     <a href="#" class="article1-img"><img src="./img/pexels-night.jpeg" alt="night"></a>
-    <div class="article1-date">Màj le 20/06/2022</div>
+    <div class="article1-date">Màj le 21/06/2022</div>
     <h2 class="article1-title"><a href="#">Découverte du Monde</a></h2>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, adipisci. Consequatur saepe delectus doloribus tempore at ducimus nisi incidunt expedita.</p>
 </article>
 <article class="article1">
     <a href="#" class="article1-img"><img src="./img/pexels-lake.jpeg" alt="lake"></a>
-    <div class="article1-date">Màj le 20/06/2022</div>
+    <div class="article1-date">Màj le 21/06/2022</div>
     <h2 class="article1-title"><a href="#">LifeStyle</a></h2>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus illum aut mollitia impedit numquam cumque rerum animi vero doloribus dolores?</p>
 </article>
 <article class="article1">
     <a href="#" class="article1-img"><img src="./img/pexels-sand.jpeg" alt="sand"></a>
-    <div class="article1-date">Màj le 20/06/2022</div>
+    <div class="article1-date">Màj le 21/06/2022</div>
     <h2 class="article1-title"><a href="#">Trucs & Astuces</a></h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptas alias doloribus accusamus iste. Dolore laudantium aspernatur quaerat vero consequuntur.</p>
 </article>
