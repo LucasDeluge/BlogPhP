@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.topbar {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.topbar nav {
+    float: left;
+    padding: 30px;
+}
+
+.log {
+    float: right;
+    padding: 15px;
+    font-size: 20px;
+    text-decoration: none;
+}
+    
+.log a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.topbar nav a {
+    color: lightgrey;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0 53px;
+}
+
+.topbar nav a:hover {
+    color:white
+}
+
+.banniere {
+    height: 437px;
+    background: no-repeat center / cover url("img/pexels-sky.jpeg");
+}
+
+.body {
+    display: flex;
+}
+
+.main {
+    position: relative;
+    width: 60%;
+    background: white;
+    box-shadow: 0 4px 30px rgba(0,0,0,.5);
+    z-index: 2;
+}
+
+.sidebar {
+    position: relative;
+    background: #dfbc66;
+    width: 40%;
+    padding: 40px;
+    z-index: 1;
+}
+
+.sidebar-title {
+    font-size: 30px;
+    color: black;
+    margin: 35px 0;
+}
+
+.sidebar-title:first-child {
+    margin-top: 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+.sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 2.2;
+    font-size: 17px;
+}
+
+.sidebar li {
+    padding: 6px 0;
+}
+
+.sidebar li:first-child {
+    padding-top: 0;
+}
+
+.sidebar-title:last-child {
+    padding-bottom: 0;
+}
+
+.sidebar hr {
+    border:none;
+    background: black;
+    height: 1px;
+    margin: 50px 0;
+}
+
+.container-main {
+    margin: 0 auto;
+    max-width: 940px;
+}
+.article1 {
+    position: relative;
+    margin: 50px 0;
+    padding-left: 333px;
+    min-height: 203px;
+}
+
+.article1-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    margin-right: 25px;
+}
+
+.article1-img img {
+    width: 100%;
+    height: auto;
+}
+
+.article1-date {
+    font-weight: 300px;
+    color: rgba(0,0,0,.5);
+    margin-bottom: 5px;
+}
+
+.article1-title {
+    font-size: 2.25rem;
+    line-height: 1;
+    margin: 0;
+}
+
+.article1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.article1 a:hover {
+    text-decoration: underline;
+}
+
+.article1 p {
+    font-weight: bold;
+}
