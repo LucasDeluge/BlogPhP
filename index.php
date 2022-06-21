@@ -18,7 +18,7 @@
 ?> -->
     <header class="topbar">
         <nav>
-            <a href="./index.html">Accueil</a>
+            <a href="./index.php">Accueil</a>
             <a href="./articles.html">Articles</a>
             <a href="./contact.html">Contact</a>
         </nav>
