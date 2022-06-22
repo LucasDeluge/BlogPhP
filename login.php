@@ -38,14 +38,12 @@
                             var_dump($_SESSION);
                         }
                     } else {
-                        throw new Exception('erreur avec le mail ou le mdp');
+                        throw new Exception('erreur : email ou mot de passe incorrect');
                     }
                 } else {
                     throw new Exception('erreur : compte non reconnu');
                 }
-            } else {
-                throw new Exception('erreur : le courriel ou le mot de passe sont vide');
-            }
+            } 
         } catch (PDOException | Exception $Exception) {
             echo '
                     <div class="alert alert-dismissible alert-danger">
@@ -65,13 +63,15 @@
             <label><b>Mot de passe</b></label>
             <input type="password" placeholder="Entrer le mot de passe" name="passeword" required>
 
-            <input type="submit" id='submit' value='CONNEXION' >
+            <input type="submit" id='submit' value='CONNEXION'>
 
         </form>
+<?php
 
-
-
-    </div>
+ echo'<strong>Connexion réussie, Bienvenue !</strong>';
+ echo'<br><strong><a href="./index.php">Retour</a></strong>';
+?>
+</div>
 </body>
 
 </html>
