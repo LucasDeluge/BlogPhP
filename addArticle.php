@@ -20,27 +20,27 @@
     $titre = htmlspecialchars($titre);
     $categorie = $_POST['categorie'] ?? false;
     $categorie = htmlspecialchars($categorie);
-    $message = $_POST['message'] ?? false;
-    $message = htmlspecialchars($message);
+    $description = $_POST['description'] ?? false;
+    $description = htmlspecialchars($description);
 
     //Vérifier 
-    if (strlen($titre) > 0 && $categorie > 0 && $message > 0) {
+    if (strlen($titre) > 0 && $categorie > 0 && $description > 0) {
 
         require_once 'connexionDB.php';
 
         //Je prépare ma requete
-        $req = $pdo->prepare('insert into article values (null, :titre, :categorie, :message, NOW())');
+        $req = $pdo->prepare('insert into article values (null, :titre, :categorie, :description, NOW())');
         //Je l'exécute avec les paramètres nécessaires
         if($req->execute([
             ':titre' => $titre,
             ':categorie' => $categorie,
-            ':message' => $message,
+            ':description' => $description,
         ])){
             echo '
             <div class="alert alert-dismissible alert-success">
               <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
               <strong>Bravo!</strong> Article créer avec succès 
-            <a href="./addArticle.php" class="alert-link"> - Retour </a>.
+            <a href="./listArticle.php" class="alert-link"> - Retour </a>.
             </div>
             ';
         } else {
@@ -65,8 +65,8 @@
             <input type="text" class="form-control" id="categorie" name="categorie" placeholder="Catégorie">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Message</label>
-            <input type="text" class="form-control" id="message" name="message" placeholder="Message">
+            <label for="exampleFormControlInput1" class="form-label">Description</label>
+            <input type="text" class="form-control" id="description" name="description" placeholder="Description">
         </div>
         <button type="submit" class="btn btn-primary">Ajouter</button>
     </form>

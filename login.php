@@ -12,19 +12,53 @@
         <form action="" method="POST">
             <h1>Connexion</h1>
                 
-            <label><b>Nom d'utilisateur</b></label>
-            <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+            <label><b>Email</b></label>
+            <input type="text" placeholder="Entrer l'adresse e-mail" name="email" required>
 
             <label><b>Mot de passe</b></label>
-            <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+            <input type="password" placeholder="Entrer le mot de passe" name="passeword" required>
             
             <input type="submit" id='submit' value='CONNEXION' >
             <?php
-            if(isset($_GET['erreur'])){
-                  $err = $_GET['erreur'];
-                  if($err==1 || $err==2)
-                  echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+            try {
+                $email = $_POST['email'] ?? null;
+                $mdp = $_POST['passeword'] ?? null;
+                $mdp = htmlspecialchars($mdp);
+        
+                //Je vérifie que le mdp n'est pas null et que le mail soit valide
+                if (!is_null($mdp) && filter_var($email, FILTER_VALIDATE_EMAIL) !== false) {
+                    require_once 'connexionDB.php';
+        
+                    $stmt = $pdo->prepare("select * from users where email = :email");
+        
+                    if ($stmt->execute([
+                        ':email' => $email
+                    ])) {
+                        //si je trouve mon utilisateur en bdd
+                        if ($stmt->rowCount() === 1) {
+                            // je le lie a ma var $user
+                            $user = $stmt->fetch();
+        
+                            //mdp identique?
+                            if (password_verify($mdp, $user['passeword'])) {
+                                session_start();
+                                $_SESSION['users'] = $user;
+                                var_dump($_SESSION);
+                            }
+                        } else {
+                            throw new Exception('erreur avec le mail ou le mdp');
+                        }
+                    }
                 }
+            } catch (PDOException|Exception $Exception) {
+                echo '
+                    <div class="alert alert-dismissible alert-danger">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                      <strong>Erreur!</strong> <a href="login.php" class="alert-link">Une erreur est survenue : ' . $Exception->getMessage() . '
+                    </a>.
+                    </div>
+                    ';
+            }
         ?>
     </form>
     </div>

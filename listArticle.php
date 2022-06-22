@@ -28,11 +28,11 @@ foreach ($pdo->query("select * from article")->fetchAll() as $key => $article) {
     <p>
     <p class='card-text'>{$dateCreation->format('d/m/y H:i:s')}</p>
     <p>
-    <form action='' method='post' class='mr-2'>
+    <form action='updateArticle.php' method='post' class='mr-2'>
         <input type='hidden' name='id' value='{$article['id']}'>
         <button type='submit' class='btn btn-warning'>Modifier</button>
     </form>
-    <form action='' method='post' class='mr-2'>
+    <form action='delArticle.php' method='post' class='mr-2'>
         <input type='hidden' name='id' value='{$article['id']}'>
         <button type='submit' class='btn btn-danger'>Supprimer</button>
     </form>

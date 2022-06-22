@@ -8,24 +8,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- <?php
-    session_start();
-    if($_SESSION['username'] !== ""){
-        $user = $_SESSION['username'];
-        // afficher un message
-        echo "Bonjour $user, vous êtes connecté";
-     }
-?> -->
     <header class="topbar">
         <nav>
             <a href="./index.php">Accueil</a>
-            <a href="./addArticle.php">Articles</a>
-            <a href="./listArticle.php">Liste</a>
-            <a href="./contact.html">Contact</a>
+            <a href="./addArticle.php" target="_blank">Articles</a>
+            <a href="./listArticle.php" target="_blank">Liste</a>
+            <a href="./contact.html" target="_blank">Contact</a>
         </nav>
         <div class="log">
-            <a href="./login.php">Connexion</a>
-            <a href="./inscription.php">Inscription</a>
+            <a href="./login.php" target="_blank">Connexion</a>
+            <a href="./inscription.php" target="_blank">Inscription</a>
         </div>
     </header>
 <div class="banniere">
@@ -35,19 +27,19 @@
     <div class="container-main">
 <article class="article1">
     <a href="#" class="article1-img"><img src="./img/pexels-night.jpeg" alt="night"></a>
-    <div class="article1-date">Màj le 21/06/2022</div>
+    <div class="article1-date">Màj le 22/06/2022</div>
     <h2 class="article1-title"><a href="#">Découverte du Monde</a></h2>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, adipisci. Consequatur saepe delectus doloribus tempore at ducimus nisi incidunt expedita.</p>
 </article>
 <article class="article1">
     <a href="#" class="article1-img"><img src="./img/pexels-lake.jpeg" alt="lake"></a>
-    <div class="article1-date">Màj le 21/06/2022</div>
+    <div class="article1-date">Màj le 22/06/2022</div>
     <h2 class="article1-title"><a href="#">LifeStyle</a></h2>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus illum aut mollitia impedit numquam cumque rerum animi vero doloribus dolores?</p>
 </article>
 <article class="article1">
     <a href="#" class="article1-img"><img src="./img/pexels-sand.jpeg" alt="sand"></a>
-    <div class="article1-date">Màj le 21/06/2022</div>
+    <div class="article1-date">Màj le 22/06/2022</div>
     <h2 class="article1-title"><a href="#">Trucs & Astuces</a></h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptas alias doloribus accusamus iste. Dolore laudantium aspernatur quaerat vero consequuntur.</p>
 </article>
