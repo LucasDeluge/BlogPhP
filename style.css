@@ -1,6 +1,6 @@
-/* #mountain{
+#mountain{
   background: no-repeat center / cover url("./img/pexels-mountain.jpeg")
-} */
+}
 
 #beach{
   background: no-repeat center / cover url("./img/pexels-beach.jpeg");
@@ -53,3 +53,4 @@ input[type=submit]:hover {
   color: #53af57;
   border: 1px solid #53af57;
 }
+
