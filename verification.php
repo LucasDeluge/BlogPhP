@@ -1,7 +1,7 @@
 <?php
-  // Vérifie qu'il provient d'un formulaire
+  // Vérifier qu'il provient d'un formulaire
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    //identifiants mysql
+    //Identifiants mysql
     $host = "localhost";
     $username = "userblog";
     $password = "J3.]_)CDQ4/lpUbx";
@@ -27,7 +27,7 @@
       die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
     }  
     
-    //préparer la requête d'insertion SQL
+    //Préparer la requête d'insertion SQL
     $statement = $mysqli->prepare("INSERT INTO users (username, passeword, email) VALUES(?, ?, ?)"); 
     //Associer les valeurs et exécuter la requête d'insertion
     $statement->bind_param('sss', $name, $mdp, $email); 

@@ -15,7 +15,7 @@
     <h1>Ajouter un article</h1>
     <?php
 
-    //on récuperer les info du formulaire
+    //Récuperer les info du formulaire
     $titre = $_POST['titre'] ?? false;
     $titre = htmlspecialchars($titre);
     $categorie = $_POST['categorie'] ?? false;
@@ -23,14 +23,14 @@
     $message = $_POST['message'] ?? false;
     $message = htmlspecialchars($message);
 
-    //on fait qq verif
+    //Vérifier 
     if (strlen($titre) > 0 && $categorie > 0 && $message > 0) {
 
         require_once 'connexionDB.php';
 
-        //je prépare ma requete
+        //Je prépare ma requete
         $req = $pdo->prepare('insert into article values (null, :titre, :categorie, :message, NOW())');
-        // je l'execute avec les parametres necessaire
+        //Je l'exécute avec les paramètres nécessaires
         if($req->execute([
             ':titre' => $titre,
             ':categorie' => $categorie,
