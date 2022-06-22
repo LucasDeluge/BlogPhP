@@ -20,6 +20,7 @@
         <nav>
             <a href="./index.php">Accueil</a>
             <a href="./addArticle.php">Articles</a>
+            <a href="./listArticle.php">Liste</a>
             <a href="./contact.html">Contact</a>
         </nav>
         <div class="log">
