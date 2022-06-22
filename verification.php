@@ -7,7 +7,7 @@
     $password = "J3.]_)CDQ4/lpUbx";
     $database = "blog";
     $name = $_POST["username"]; 
-    $mdp = $_POST["password"]; 
+    $mdp = $_POST["passeword"]; 
     $email = $_POST["email"];
 
     if (!isset($name)){
@@ -28,9 +28,9 @@
     }  
     
     //préparer la requête d'insertion SQL
-    $statement = $mysqli->prepare("INSERT INTO users (username, email) VALUES(?, ?)"); 
+    $statement = $mysqli->prepare("INSERT INTO users (username, passeword, email) VALUES(?, ?, ?)"); 
     //Associer les valeurs et exécuter la requête d'insertion
-    $statement->bind_param('ss', $name, $email); 
+    $statement->bind_param('sss', $name, $mdp, $email); 
     
     if($statement->execute()){
       print "Salut " . $name . "!, votre adresse e-mail est ". $email;

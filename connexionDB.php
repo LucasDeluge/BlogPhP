@@ -5,8 +5,10 @@ error_reporting(E_ALL);
 
 $dsn = 'mysql:dbname=blog;host=localhost;port=3306;charset=utf8';
 
-$user = 'userblog';
-$pwd = 'J3.]_)CDQ4/lpUbx';
+// $user = 'userblog';
+// $pwd = 'J3.]_)CDQ4/lpUbx';
+$user = 'root';
+$pwd = '';
 
 //créer la connexion a la bdd
 $pdo = new PDO($dsn, $user, $pwd, [

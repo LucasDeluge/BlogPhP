@@ -7,9 +7,9 @@
     <title>Connexion</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="mountain">
     <div id="container">
-        <form action="verification.php" method="POST">
+        <form action="" method="POST">
             <h1>Connexion</h1>
                 
             <label><b>Nom d'utilisateur</b></label>

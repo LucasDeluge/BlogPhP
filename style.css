@@ -1,9 +1,13 @@
-body{
+#mountain{
   background: no-repeat center center / cover url("./img/pexels-mountain.jpeg")
 }
 
 #beach{
-  background: no-repeat center center / cover url("./img/pexels-beach.jpeg");
+  background: no-repeat center center / cover url("./img/pexels-beach.jpeg")
+}
+
+#sea{
+  background: no-repeat center center / cover url("./img/pexels-sea.jpeg")
 }
 
 #container{

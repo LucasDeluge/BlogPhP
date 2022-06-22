@@ -21,17 +21,17 @@ foreach ($pdo->query("select * from article")->fetchAll() as $key => $article) {
     $dateCreation = new DateTime($article['dateCreation']);
     echo"
     <div class='card border-primary my-2' style='max-width: 20rem;'>
-  <div class='card-header'>{$article['nom']} ({$article['id']})</div>
+  <div class='card-header'>{$article['titre']} ({$article['id']})</div>
   <div class='card-body'>
-    <h4 class='card-title'>{$article['prix']} &euro;</h4>
-    <p class='card-text'>{$article['poids']} kg</p>
+    <h4 class='card-title'>{$article['message']} </h4>
+    <p class='card-text'>{$article['categorie']} </p>
     <p>
     <p class='card-text'>{$dateCreation->format('d/m/y h/m/s')}</p>
     <p>
-    <form action='updateArticle.php?id={$article['id']}' method='post' class='mr-2'>
+    <form action='' method='post' class='mr-2'>
         <button type='submit' class='btn btn-warning'>Modifier</button>
     </form>
-    <form action='deleteArticle.php?id={$article['id']}' method='post' class='mr-2'>
+    <form action='' method='post' class='mr-2'>
         <button type='submit' class='btn btn-danger'>Supprimer</button>
     </form>
 </p>
