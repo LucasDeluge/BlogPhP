@@ -1,9 +1,9 @@
-#mountain{
+/* #mountain{
   background: no-repeat center / cover url("./img/pexels-mountain.jpeg")
-}
+} */
 
 #beach{
-  background: no-repeat center / cover url("./img/pexels-beach.jpeg")
+  background: no-repeat center / cover url("./img/pexels-beach.jpeg");
 }
 
 #sea{
