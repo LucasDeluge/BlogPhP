@@ -1,13 +1,16 @@
 #mountain{
-  background: no-repeat center / cover url("./img/pexels-mountain.jpeg")
+  background: no-repeat center / cover url("./img/pexels-mountain.jpeg");
+  min-height: 100vh;
 }
 
 #beach{
   background: no-repeat center / cover url("./img/pexels-beach.jpeg");
+  min-height: 100vh;
 }
 
 #sea{
-  background: no-repeat center / cover url("./img/pexels-sea.jpeg")
+  background: no-repeat center / cover url("./img/pexels-sea.jpeg");
+  min-height: 100vh;
 }
 
 #container{
