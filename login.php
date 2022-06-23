@@ -66,11 +66,11 @@
             <input type="submit" id='submit' value='CONNEXION'>
 
         </form>
-<?php
+<!-- <?php
 
  echo'<strong>Connexion réussie, Bienvenue !</strong>';
  echo'<br><strong><a href="./index.php">Retour</a></strong>';
-?>
+?> -->
 </div>
 </body>
 
