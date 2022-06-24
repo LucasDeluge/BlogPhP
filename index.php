@@ -13,7 +13,7 @@
             <a href="./index.php">Accueil</a>
             <a href="./addArticle.php" target="_blank">Articles</a>
             <a href="./listArticle.php" target="_blank">Liste</a>
-            <a href="./contact.html" target="_blank">Contact</a>
+            <a href="./contact.php" target="_blank">Contact</a>
         </nav>
         <div class="log">
             <a href="./login.php" target="_blank">Connexion</a>
