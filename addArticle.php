@@ -22,6 +22,7 @@
     $categorie = htmlspecialchars($categorie);
     $description = $_POST['description'] ?? false;
     $description = htmlspecialchars($description);
+    $image = $_POST['image'] ?? false;
 
     //Vérifier 
     if (strlen($titre) > 0 && $categorie > 0 && $description > 0) {
@@ -57,16 +58,22 @@
     ?>
     <form action="" method="post">
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Titre</label>
+            <label for="exampleFormControlInput1" class="form-label">Titre : </label>
             <input type="text" class="form-control" id="titre" name="titre" placeholder="Titre">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Catégorie</label>
+            <label for="exampleFormControlInput1" class="form-label">Catégorie : </label>
             <input type="text" class="form-control" id="categorie" name="categorie" placeholder="Catégorie">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Description</label>
+            <label for="exampleFormControlInput1" class="form-label">Description : </label>
             <input type="text" class="form-control" id="description" name="description" placeholder="Description">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Image : </label>
+            <br>
+            <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
+            <input type="file" name="image" />
         </div>
         <button type="submit" class="btn btn-primary">Ajouter</button>
     </form>
