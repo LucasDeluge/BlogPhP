@@ -56,7 +56,7 @@
     }
 
     ?>
-    <form action="" method="post">
+    <form enctype="multipart/form-data" action="" method="post">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Titre : </label>
             <input type="text" class="form-control" id="titre" name="titre" placeholder="Titre">
