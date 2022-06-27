@@ -93,7 +93,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         echo"Salut " . $username . "!, votre adresse e-mail est ". $email;
         echo'<br><a href="./index.php">Retour</a>';
     }
-     ?>
+?>
 
 <script src="https://www.google.com/recaptcha/api.js?render=6LdRh6IgAAAAAGBd6ZuwzVrucPyRV2fLfIx-9jvL"></script>
 <script>
