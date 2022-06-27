@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 22 juin 2022 à 16:16
+-- Généré le : lun. 27 juin 2022 à 11:12
 -- Version du serveur : 10.4.24-MariaDB
 -- Version de PHP : 8.1.6
 
@@ -32,6 +32,7 @@ CREATE TABLE `article` (
   `titre` varchar(50) NOT NULL,
   `categorie` varchar(50) NOT NULL,
   `description` varchar(120) NOT NULL,
+  `image` varchar(500) NOT NULL,
   `dateCreation` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -39,8 +40,8 @@ CREATE TABLE `article` (
 -- Déchargement des données de la table `article`
 --
 
-INSERT INTO `article` (`id`, `titre`, `categorie`, `description`, `dateCreation`) VALUES
-(12, 'Les chats', 'animal', 'azeraEZRAZEATRAET', '2022-06-21 15:37:51');
+INSERT INTO `article` (`id`, `titre`, `categorie`, `description`, `image`, `dateCreation`) VALUES
+(12, 'Les chats', 'animal', 'azeraEZRAZEATRAET', '', '2022-06-21 15:37:51');
 
 -- --------------------------------------------------------
 
