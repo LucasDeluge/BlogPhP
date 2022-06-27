@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +7,6 @@
     <title>Connexion</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body id="mountain">
     <div id="container">
         <?php
@@ -65,13 +63,9 @@
 
             <input type="submit" id='submit' value='CONNEXION'>
 
-        </form>
-<!-- <?php
+            <input type="hidden" id="recaptchaResponse" name="recaptcha-response">
 
- echo'<strong>Connexion réussie, Bienvenue !</strong>';
- echo'<br><strong><a href="./index.php">Retour</a></strong>';
-?> -->
+        </form>
 </div>
 </body>
-
 </html>

@@ -45,10 +45,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             }
         }
     }
-} else{
-    http_response_code(405);
-    echo 'Méthode non autorisée';
-}
+} 
+// else{
+//     http_response_code(405);
+//     echo 'Méthode non autorisée';
+// }
 
 ?>
 
