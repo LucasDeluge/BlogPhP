@@ -90,8 +90,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             ':passeword' => password_hash($mdp, PASSWORD_ARGON2I),
             ':email' => $email
         ]);
-        echo"Salut " . $username . "!, votre adresse e-mail est ". $email;
-        echo'<br><a href="./index.php">Retour</a>';
+        echo"<div class='echoValid'> Salut $username, votre adresse e-mail est $email</div>";
+        echo'<br><strong><a href="./index.php">Retour</a></strong>';
     }
 ?>
 

@@ -63,3 +63,7 @@ input[type=submit]:hover {
   border: 1px solid #53af57;
 }
 
+.echoValid {
+  color: red;
+  text-transform: uppercase;
+}
