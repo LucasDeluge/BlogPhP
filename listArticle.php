@@ -22,16 +22,16 @@ session_start();
 require_once 'connexionDB.php';
 
 foreach ($pdo->query("select * from article")->fetchAll() as $key => $article) {
+    var_dump($article);
     $dateCreation = new DateTime($article['dateCreation']);
     echo"
     <div class='card border-primary my-2' style='max-width: 20rem;'>
   <div class='card-header'>{$article['titre']} ({$article['id']})</div>
+  <img src='{$article['image']}' class='card-img-top' alt='image article'>
   <div class='card-body'>
     <h4 class='card-title'>{$article['description']} </h4>
     <p class='card-text'>{$article['categorie']} </p>
-    <p>
     <p class='card-text'>{$dateCreation->format('d/m/y H:i:s')}</p>
-    <p>
     <form action='updateArticle.php' method='post' class='mr-2'>
         <input type='hidden' name='id' value='{$article['id']}'>
         <button type='submit' class='btn btn-warning'>Modifier</button>
