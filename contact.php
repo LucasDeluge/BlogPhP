@@ -43,9 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $email = strip_tags($_POST['email']);
                     $message = htmlspecialchars($_POST['message']);
 
-                    // Traitement des données
-
-
                     //Load Composer's autoloader
                     require 'vendor/autoload.php';
 
@@ -84,6 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         // Envoi mail
                         $mail->send();
                         echo 'Message has been sent';
+                        echo'<br><strong><a href="./index.php">Retour</a></strong>';
                     } catch (Exception $e) {
                         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
                     }
@@ -144,5 +142,4 @@ else{
         });
     </script>
 </body>
-
 </html>
