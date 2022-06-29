@@ -53,6 +53,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="mountain">
+<strong><a href="./index.php">Accueil</a></strong>
     <div id="container">
         <?php
         try {
@@ -78,7 +79,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                         if (password_verify($mdp, $user['passeword'])) {
                             session_start();
                             $_SESSION['users'] = $user;
-                            var_dump($_SESSION);
+                            header('Location: index.php');
+                            exit();
                         }
                     } else {
                         throw new Exception('erreur : email ou mot de passe incorrect');
