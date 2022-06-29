@@ -105,6 +105,12 @@
             <input type="text" class="form-control" id="description" name="description" placeholder="Description"
                    value="<?php echo $article['description'] ?>">
         </div>
+        <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Image : </label>
+                <br>
+                <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
+                <input type="file" name="imgUpload" />
+            </div>
         <input type="hidden" name="id" value="<?php echo $article['id'] ?>">
         <button type="submit" class="btn btn-primary">Ajouter</button>
     </form>

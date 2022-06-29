@@ -16,13 +16,13 @@ session_start();
 <body>
 <main class="container">
     <p>
-        <a href="addArticle.php">Ajouter</a>
+        <strong><a href="addArticle.php">Ajouter</a></strong>
     </p>
 <?php
 require_once 'connexionDB.php';
 
 foreach ($pdo->query("select * from article")->fetchAll() as $key => $article) {
-    var_dump($article);
+    // var_dump($article);
     $dateCreation = new DateTime($article['dateCreation']);
     echo"
     <div class='card border-primary my-2' style='max-width: 20rem;'>

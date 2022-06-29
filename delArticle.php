@@ -12,7 +12,7 @@
             throw new Exception('Erreur lors de la suppression de l\'article (id)');
         }
 
-        //je recupere mon article
+        //je récupère mon article
         $article = $pdo->query('select * from article where id = '.$id)->fetch();
   
         //je prépare ma requete
@@ -22,7 +22,7 @@
             ':id' => $id
         ]);
 
-        //je supprime l'image lié a larticle
+        //je supprime l'image liée à l'article
         unlink($article['image']);
 
         echo '

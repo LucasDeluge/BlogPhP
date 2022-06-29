@@ -21,7 +21,7 @@
         $categorie = htmlspecialchars($categorie);
         $description = $_POST['description'] ?? false;
         $description = htmlspecialchars($description);
-        $image = "img".date("dmYHis")."."."jpg" ?? false;
+        $imgUpload = "img".date("dmYHis")."."."jpg" ?? false;
 
         //Vérifier 
         if (strlen($titre) > 0 && $categorie > 0 && $description > 0) {
