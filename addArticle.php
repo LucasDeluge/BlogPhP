@@ -31,7 +31,8 @@
             var_dump($_FILES);
 
             $imgUpload = $_FILES["imgUpload"];
-            $target_file = "/blog/BlogPhP/uploadimg/";
+            $target_file = __DIR__ . './uploadimg/' . basename($imgUpload["name"]);
+            $imgPath = './uploadimg/' . $imgUpload["name"];
             $uploadOk = true;
             $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
@@ -73,7 +74,7 @@
                 // if everything is ok, try to upload file
             } else {
                 // Je déplace mon fichier du dossier temporaire vers son dossier définitif
-                if (move_uploaded_file($_FILES["imgUpload"]["tmp_name"], $target_file)) {
+                if (move_uploaded_file($_FILES["imgUpload"]["tmp_name"], $imgPath)) {
                     echo "Le fichier " . htmlspecialchars(basename($_FILES["imgUpload"]["name"])) . " a été déplacé.";
                 } else {
                     echo "Désolé, une erreur est survenue.";
@@ -87,7 +88,7 @@
                 ':titre' => $titre,
                 ':categorie' => $categorie,
                 ':description' => $description,
-                ':image' => $target_file,
+                ':image' => $imgPath,
             ])) {
                 echo '
             <div class="alert alert-dismissible alert-success">

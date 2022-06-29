@@ -12,12 +12,18 @@
             throw new Exception('Erreur lors de la suppression de l\'article (id)');
         }
 
+        //je recupere mon article
+        $article = $pdo->query('select * from article where id = '.$id)->fetch();
+  
         //je prépare ma requete
         $req = $pdo->prepare('delete from article where id = :id');
         // je l'execute avec les parametres necessaire
         $req->execute([
             ':id' => $id
         ]);
+
+        //je supprime l'image lié a larticle
+        unlink($article['image']);
 
         echo '
             <div class="alert alert-dismissible alert-success">
