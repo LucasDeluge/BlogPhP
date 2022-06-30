@@ -23,7 +23,7 @@
         if ($id <= 0) {
             throw new Exception('Erreur lors de la récuperation de l\'article (id)');
         }
-        //je prépare ma requet1e
+        //je prépare ma requete
         $req = $pdo->prepare('select * from article where id = :id');
         // je l'execute avec les parametres necessaire
         $req->execute([
@@ -59,6 +59,7 @@
             require_once 'connexionDB.php';
 
             //je prépare ma requete
+            $article = $pdo->query('select * from article where id = '.$id)->fetch();
             $req = $pdo->prepare('update article set titre = :titre, categorie = :categorie, description = :description where id = :id');
             // je l'execute avec les parametres necessaire
             $req->execute([
@@ -81,7 +82,7 @@
             echo '
             <div class="alert alert-dismissible alert-danger">
               <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-              <strong>Erreur!</strong> <a href="#" class="alert-link">Une erreur est survenue : ' . $Exception->getMessage() . '
+              <strong>Erreur!</strong> <a href="listArticle.php" class="alert-link">Une erreur est survenue : ' . $Exception->getMessage() . '
             </a> and try submitting again.
             </div>
             ';
@@ -105,12 +106,12 @@
             <input type="text" class="form-control" id="description" name="description" placeholder="Description"
                    value="<?php echo $article['description'] ?>">
         </div>
-        <div class="mb-3">
+        <!-- <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Image : </label>
                 <br>
                 <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
                 <input type="file" name="imgUpload" />
-            </div>
+            </div> -->
         <input type="hidden" name="id" value="<?php echo $article['id'] ?>">
         <button type="submit" class="btn btn-primary">Ajouter</button>
     </form>
