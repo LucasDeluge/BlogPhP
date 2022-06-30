@@ -9,28 +9,43 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Blog</title>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">       
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">       
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="topbar">
-        <nav>
+        <!-- <nav>
             <a href="./index.php">Accueil</a>
             <a href="./addArticle.php" target="_blank">Articles</a>
             <a href="./listArticle.php" target="_blank">Liste</a>
             <a href="./contact.php" target="_blank">Contact</a>
         </nav>
         <div class="log">
-            <a href="./login.php"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
-            <!-- <a href="./inscription.php">Inscription</a> -->
+            <a href="./login.php"><i class="fa-solid fa-arrow-right-to-bracket"></i></a> 
             <a href="./logoff.php"><i class="fa-solid fa-power-off"></i></a>
-        </div>
+        </div> -->
+        <?php
+        if (isset($_SESSION['users']['username'])) {
+            echo '<nav><a href="./index.php">Accueil</a>';
+            echo '<a href="./addArticle.php" target="_blank">Articles</a>';
+            echo '<a href="./listArticle.php" target="_blank">Liste</a>';
+            echo '<a href="./contact.php" target="_blank">Contact</a></nav>';
+            echo '<div class="log"><a href="./logoff.php"><i class="fa-solid fa-power-off"></i></a></div>';
+        } else {
+            echo '<nav><a href="./index.php">Accueil</a>';
+            echo '<a href="./listArticle.php" target="_blank">Liste</a>';
+            echo '<a href="./contact.php" target="_blank">Contact</a></nav>';
+            echo '<div class="log"><a href="./login.php"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>';
+        }
+        ?>
     </header>
 <div class="banniere">
 </div>
 <?php 
-var_dump($_SESSION);
-echo "<br>Connexion réussie, bienvenue {$_SESSION['users']['username']} !"
+// var_dump($_SESSION);
+if (isset($_SESSION['users']['username'])) {
+echo "<br>Connexion réussie, bienvenue {$_SESSION['users']['username']} !";
+}
 ?>
 <div class="body">
 <div class="main">

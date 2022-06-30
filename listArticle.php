@@ -1,7 +1,6 @@
-<!-- <?php
+<?php
 session_start();
- print_r( $_SESSION['users']) ?? '';
-?> -->
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
