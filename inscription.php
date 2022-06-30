@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     // On vérifie si le champ "recaptcha-response" contient une valeur
@@ -58,6 +59,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <link rel="stylesheet" href="./style.css">
 </head>
 <body id="beach">
+<strong><a href="./index.php">Accueil</a></strong>
 <div class="error"></div>
 <div id="container">
         <form action="" id="formToCheck" onsubmit="return validForm()" method="POST">
@@ -92,7 +94,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             ':email' => $email
         ]);
         echo"<div class='echoValid'> Salut $username, votre adresse e-mail est $email</div>";
-        echo'<br><strong><a href="./index.php">Retour</a></strong>';
     }
 ?>
 

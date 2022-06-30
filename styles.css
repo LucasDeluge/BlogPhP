@@ -25,8 +25,9 @@ body, html {
 
 .log {
     float: right;
-    padding: 15px;
+    padding: 30px;
     font-size: 20px;
+    font-weight: 500;
     text-decoration: none;
 }
     
@@ -162,9 +163,20 @@ body, html {
     font-weight: bold;
 }
 
-@media screen and (min-width: 768px) {
-    .body {
-    float: left;
-    width: 100%;
-}
+@media screen and (max-width: 800px) {
+    .topbar {
+
+    }
+    .banniere {
+        
+    }
+    .main {
+        
+    }
+    .article1-img {
+
+    }
+    .sidebar {
+    
+    }
 }

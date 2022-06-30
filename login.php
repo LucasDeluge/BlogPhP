@@ -110,6 +110,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
             <input type="submit" id='submit' value='CONNEXION'>
 
+            <a href="./inscription.php">Pas de compte ?</a>
+
             <input type="hidden" id="recaptchaResponse" name="recaptcha-response">
 
         </form>
