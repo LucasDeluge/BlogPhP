@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -29,7 +33,7 @@
             require_once 'connexionDB.php';
 
             var_dump($_FILES);
-
+            $users = $_SESSION['users']['username'];
             $imgUpload = $_FILES["imgUpload"];
             $target_file = __DIR__ . './uploadimg/' . basename($imgUpload["name"]);
             $imgPath = './uploadimg/' . $imgUpload["name"];
@@ -82,13 +86,14 @@
             }
 
             //Je prépare ma requete
-            $req = $pdo->prepare('insert into article values (null, :titre, :categorie, :description, :image, NOW())');
+            $req = $pdo->prepare('insert into article values (null, :titre, :categorie, :description, :image, :users, NOW())');
             //Je l'exécute avec les paramètres nécessaires
             if ($req->execute([
                 ':titre' => $titre,
                 ':categorie' => $categorie,
                 ':description' => $description,
                 ':image' => $imgPath,
+                ':users' => $users
             ])) {
                 echo '
             <div class="alert alert-dismissible alert-success">
