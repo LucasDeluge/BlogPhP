@@ -23,7 +23,6 @@ var_dump($_SESSION);
         foreach ($pdo->query("select * from article")->fetchAll() as $key => $article) {
             // $_SESSION['users']['username'] = $user;
             $dateCreation = new DateTime($article['dateCreation']);
-
             echo "
             <div class='card border-primary my-2' style='max-width: 20rem;'>
                 <div class='card-header'>{$article['titre']} ({$article['id']})</div>
@@ -31,7 +30,7 @@ var_dump($_SESSION);
                 <div class='card-body'>
                     <h4 class='card-title'>{$article['description']} </h4>
                     <p class='card-text'>{$article['categorie']} </p>
-                    <p class='card-text'>{$dateCreation->format('d/m/y H:i:s')} </p>
+                    <p class='card-text'>Posté le {$dateCreation->format('d/m/y à H:i:s')} par {$article['users']} </p>
                     ";
                     if ($article['users'] == $_SESSION['users']['username']) {
                         echo"
